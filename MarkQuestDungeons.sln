@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkQuestDungeonsML", "src\MarkQuestDungeonsML.csproj", "{8B719226-824E-4664-9C1D-8F8A20667337}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkQuestDungeons", "MarkQuestDungeons\MarkQuestDungeons.csproj", "{8B719226-824E-4664-9C1D-8F8A20667337}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

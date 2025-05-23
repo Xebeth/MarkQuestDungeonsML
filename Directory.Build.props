@@ -2,7 +2,7 @@
  <PropertyGroup>
     <SolutionDir Condition=" '$(SolutionDir)' == '' ">$(MSBuildThisFileDirectory)</SolutionDir>
     <OutputDir Condition=" '$(OutputDir)' == '' ">$(SolutionDir)</OutputDir>
-	<BaseOutputPath>$(SolutionDir)\output\$(MSBuildProjectName)\$(Configuration)\</BaseOutputPath>
+	<BaseOutputPath>$(SolutionDir)Output\$(MSBuildProjectName)\$(Configuration)\</BaseOutputPath>
     <OutputPath>$(BaseOutputPath)bin</OutputPath>
     <BaseIntermediateOutputPath>$(BaseOutputPath)obj</BaseIntermediateOutputPath>
  </PropertyGroup>
