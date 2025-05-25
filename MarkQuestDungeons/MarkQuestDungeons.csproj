@@ -10,6 +10,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="NorthEdge.MagicLoaderGenerator" Version="1.2.1" />
+    </ItemGroup>
+
+    <ItemGroup>
       <None Update="config.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
