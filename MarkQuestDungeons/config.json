@@ -1,7 +1,4 @@
 {
-  "OutputDirectory": "MagicLoader",
-  "LocalizationSource": "Localization",
-  "IncludedSections": [ "ST_FullNames" ],
   "ModName": "MarkQuestDungeonsML",
   "ModFiles": {
     "MarkQuestDungeons.json": {
