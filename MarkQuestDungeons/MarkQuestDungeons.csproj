@@ -6,7 +6,6 @@
         <LangVersion>latest</LangVersion>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>MarkQuestDungeonsML</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,23 +13,50 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="config.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
+        <None Update="config.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="$(SolutionDir)\readme.md">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="$(SolutionDir)\LICENSE">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="$(SolutionDir)\readme.md" />
+        <None Include="$(SolutionDir)\LICENSE" />
     </ItemGroup>
 
     <ItemGroup>
         <LocalizationItems Include="$(SolutionDir)Localization\**" Exclude="$(SolutionDir)Localization\.gitignore">
             <InProject>false</InProject>
         </LocalizationItems>
+        <InputItems Include="$(SolutionDir)Input\**" Exclude="$(SolutionDir)Input\.gitignore">
+            <InProject>false</InProject>
+        </InputItems>
+        <LoclizationReadmeFile Include="$(SolutionDir)\Localization\readme.txt">
+            <InProject>false</InProject>
+        </LoclizationReadmeFile>
+        <InputReadmeFile Include="$(SolutionDir)\Input\readme.txt">
+            <InProject>false</InProject>
+        </InputReadmeFile>
+        <ReadmeFile Include="$(SolutionDir)\readme.md">
+            <InProject>false</InProject>
+        </ReadmeFile>
+        <ReadmeFile Include="$(SolutionDir)\LICENSE">
+            <InProject>false</InProject>
+        </ReadmeFile>
     </ItemGroup>
 
-    <ItemGroup>
-      <PackageReference Include="NorthEdge.MagicLoaderGenerator" Version="1.2.0" />
-    </ItemGroup>
+    <Target Name="Prepublish documentation" BeforeTargets="PrepareForPublish">
+        <Copy SourceFiles="@(ReadmeFile)" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="false" />
+        <Copy SourceFiles="@(LicenseFile)" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="false" />
+        <Copy SourceFiles="@(InputReadmeFile)" DestinationFolder="$(PublishDir)Input\" SkipUnchangedFiles="false" />
+        <Copy SourceFiles="@(LoclizationReadmeFile)" DestinationFolder="$(PublishDir)Localization\" SkipUnchangedFiles="false" />
+    </Target>
 
     <Target Name="Copy localization files" AfterTargets="Build">
         <Copy SourceFiles="@(LocalizationItems)" DestinationFiles="@(LocalizationItems->'$(OutputPath)\Localization\%(RecursiveDir)%(Filename)%(Extension)')"/>
+        <Copy SourceFiles="@(InputItems)" DestinationFiles="@(InputItems->'$(OutputPath)\Input\%(RecursiveDir)%(Filename)%(Extension)')"/>
     </Target>
 
 </Project>
