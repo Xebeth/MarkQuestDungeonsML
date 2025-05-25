@@ -22,7 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="NorthEdge.MagicLoaderGenerator" Version="1.1.0" />
+      <PackageReference Include="NorthEdge.MagicLoaderGenerator" Version="1.2.0" />
     </ItemGroup>
 
     <Target Name="Copy localization files" AfterTargets="Build">
