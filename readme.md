@@ -43,3 +43,5 @@ Append symbols to location names that are involved in quests. Based on the scrip
 - Update the MagicLoaderGenerator library to version 1.2.1 to fix problems with the generated Zip archives
 ## Version 1.1
 - Added 53 interior locations related to quests
+## Version 1.1.1
+- Added 3 interior locations related to quests
