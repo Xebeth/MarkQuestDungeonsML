@@ -1,1 +1,0 @@
-Place the MagicLoader files you wish to be translated here.

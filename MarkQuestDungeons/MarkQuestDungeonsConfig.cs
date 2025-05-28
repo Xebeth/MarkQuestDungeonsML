@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using MagicLoaderGenerator.Filesystem;
 
-namespace MarkQuestDungeonsML;
+namespace MarkQuestDungeons;
 
 public record MarkQuestDungeonsConfig: AppConfig
 {

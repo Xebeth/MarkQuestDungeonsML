@@ -2,7 +2,7 @@
   "ModName": "MarkQuestDungeonsML",
   "ModFiles": {
     "MarkQuestDungeons.json": {
-      "FullNamesEditEntries": [
+      "GlobalEdit": [
         "LOC_FN_AmelionFamilyTomb",
         "LOC_FN_Anga",
         "LOC_FN_AnvilCastleSmugglersCave",
@@ -53,6 +53,7 @@
         "LOC_FN_FortSutchInterior",
         "LOC_FN_FortTeleman",
         "LOC_FN_FrostFireCave",
+        "LOC_FN_FrostfireGlade",
         "LOC_FN_GlademistCave",
         "LOC_FN_Greyland",
         "LOC_FN_GuttedMine",
@@ -82,6 +83,7 @@
         "LOC_FN_Malada01",
         "LOC_FN_MemorialCave",
         "LOC_FN_MingoCave",
+        "LOC_FN_Miscarcand",
         "LOC_FN_Miscarcand01",
         "LOC_FN_MossRockCavern",
         "LOC_FN_MuckValleyCavern",
